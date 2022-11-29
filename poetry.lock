@@ -296,6 +296,14 @@ gen_docs = ["pytoolconfig", "sphinx-rtd-theme (>=1.0.0)", "sphinx-autodoc-typehi
 doc = ["sphinx (>=4.5.0)", "tabulate (>=0.8.9)"]
 
 [[package]]
+name = "random2"
+version = "1.0.1"
+description = "Python 3 compatible Pytohn 2 `random` Module."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "replit"
 version = "3.2.4"
 description = "A library for interacting with features of repl.it"
@@ -478,7 +486,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "f328c469a46d9cb95c79b10c69318f07ccca3f40cc6eb43ef51c87ad2ff1879b"
+content-hash = "ebcfc1a7bc767a301b2b29402b7518d9892fa3b6c4e3a1c6cc4a7435ac1be706"
 
 [metadata.files]
 aiohttp = []
@@ -507,6 +515,7 @@ pyflakes = []
 pyparsing = []
 python-lsp-jsonrpc = []
 pytoolconfig = []
+random2 = []
 replit = []
 replit-python-lsp-server = []
 requests = []
