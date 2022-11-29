@@ -1,15 +1,16 @@
 import string
 import random
-
+from colorama import Fore, Back, Style
 
 def menu():
-  choose = input("""
+  print(Back.CYAN+"""
   *********** Select Your Choice ***********
-  |\t1: Password Strength Checker          |
-  |\t2: Paswword Generator.                |
-  |\t3: To Generate Bulk Passwords         |
-  ******************************************
-  """)
+  1: Password Strength Checker.             
+  2: Paswword Generator.                    
+  3: To Generate Bulk Passwords.            
+  ******************************************\n""")
+  print(Style.RESET_ALL)
+  choose = input()
   if (int(choose) == 1):
     pass_checker()
   elif (int(choose) == 2):
@@ -22,11 +23,13 @@ def menu():
 
 ################################## Password Checker ###############################################
 def pass_checker():
-  print("""
-***************************************************************
-* Enter any 16 digits string consist of Uppercase, Lowercase, *
-* Special Characters like |@, #, %, &|                        *
-***************************************************************
+  print(Fore.LIGHTBLUE_EX+"""
+----------------------------------------
+Enter any 16 digits string consist of:
+>| Uppercase
+>| Lowercase
+>| Special Characters like (@, #, %, &)
+----------------------------------------
 """)
   str = input("")
   if len(str) >= 16:
@@ -46,13 +49,13 @@ def pass_checker():
 ################################## Password Generator #############################################
 def pass_gen():
   password = ""
-  res = int(input("""
+  res = int(input(Fore.YELLOW +"""
 Enter The Length of the Password>| """))
   for i in range(res):
     random_string = ''.join(
       random.choice(string.ascii_letters + string.digits + string.punctuation))
     password += random_string
-  print(f"""
+  print(Fore.GREEN+f"""
 Your Strong {res} Digits password is
 ------------------------------------------------------------
 {password}                                                 
