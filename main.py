@@ -1,6 +1,7 @@
 import string
 import random
 from colorama import Fore, Back, Style
+from tabulate import tabulate
 
 def menu():
   print(Back.CYAN+"""
@@ -65,20 +66,20 @@ Your Strong {res} Digits password is
 
 ############################### Bulk Password Generator #########################################
 def bulk_psgen():
+  passlist=[]
   password = ""
-  res = int(input("""
-Enter The Length of the Password>| """))
-  numof = int(input("""
-Enter Number of Password you need >| """))
+  res = int(input("Enter The Length of the Password>| "))
+  numof = int(input("Enter Number of Password you need >| "))
+  print(f"Your Strong {res} Digits password is")
+  print("-------------------------------------")
   for x in range(numof):
     for i in range(res):
       random_string = ''.join(
         random.choice(string.ascii_letters + string.digits +
                       string.punctuation))
       password += random_string
-    print(f"""
-Your Strong {res} Digits password is
-------------------------------------------------------------
-{password}\n""")
-    password = ""
+    print("\n"+f"Password-{x+1}: ",password)
+    password=""
+  print("---------------------------------------")
+  
 menu()
