@@ -1,7 +1,6 @@
 import string
 import random
 from colorama import Fore, Back, Style
-from tabulate import tabulate
 
 def menu():
   print(Back.CYAN+"""
