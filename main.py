@@ -81,6 +81,4 @@ Your Strong {res} Digits password is
 ------------------------------------------------------------
 {password}\n""")
     password = ""
-
-
 menu()
