@@ -38,7 +38,7 @@ Enter any 16 digits string consist of:
         if x == x.lower():
           if (x == '@' or x == '#' or x == '%' or x == '!' or x == '$'
               or x == '*' or x == ')' or x == '('):
-            print("Seems Like a Strong Password to me")
+            print(Fore.GREEN+"Seems Like a Strong Password to me")
             break
     else:
       print("Weak Password")
